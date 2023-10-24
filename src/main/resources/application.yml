@@ -1,0 +1,38 @@
+spring:
+  mail:
+    host: smtp.mailtrap.io
+    username: 44ab26d58fdbea
+    password: 183a5540afddbc
+    port: 2525
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+  kafka:
+    topic:
+      name: message-topic
+    topic-json:
+      name: messageJson-topic 
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true

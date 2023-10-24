@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f2e7b4, #007bff);
+            margin: 0;
+            padding: 0;
+            color: #333; /* Text color */
+        }
+
+        h1 {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div {
+            background: #f2e7b4;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+        
+     	img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its container width */
+            border: 3px solid #fff; /* Add a white border */
+            border-radius: 50%; /* Make the image round */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+    </style>
+</head>
+<body>
+<h1>title</h1>
+<div class="conntent" th:utext="${WHOLE}"></div>
+<h1>footer</h1>
+</body>
+</html>
